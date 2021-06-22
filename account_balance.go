@@ -27,7 +27,7 @@ func main() {
 	fmt.Println(balance)
 
 	blockNumber := big.NewInt(0)
-	// using ganachi-cli, the block number to this account is 0
+	// using ganache-cli, the block number to this account is 0
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
 		log.Fatalf("balanceAt error with block number %s", err.Error())
