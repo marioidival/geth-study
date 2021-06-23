@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 	"regexp"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -32,7 +33,7 @@ func main() {
 	fmt.Println("is valid: ", checkIfAddressIsValid("0x323b5d4c32345ced77393b3530b1eed0f346429d"))
 	fmt.Println("is valid: ", checkIfAddressIsValid("0xZYXb5d4c32345ced77393b3530b1eed0f346429d"))
 
-	client, err := ethclient.Dial("http://localhost:8545")
+	client, err := ethclient.Dial(os.Getenv("MAINNET_INFURA_URL"))
 	if err != nil {
 		log.Fatalf("ethclient error: %s", err.Error())
 	}

@@ -6,27 +6,29 @@ import (
 	"log"
 	"math"
 	"math/big"
+	"os"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
 func main() {
-	client, err := ethclient.Dial("http://localhost:8545")
+	client, err := ethclient.Dial(os.Getenv("MAINNET_INFURA_URL"))
 	if err != nil {
 		log.Fatalf("connection error: %s ", err.Error())
 	}
 
 	// reading balance of an account
 	account := common.HexToAddress("0xc203E29ecBEc4a1abAC5a1A5f0266235d1b7eF82")
+	blockNumber := big.NewInt(0)
 	// third arg from BalanceAt is a block number
-	balance, err := client.BalanceAt(context.Background(), account, nil)
+	balance, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
 		log.Fatalf("balanceAt error: %s ", err.Error())
 	}
 	fmt.Println(balance)
 
-	blockNumber := big.NewInt(0)
+	blockNumber = big.NewInt(0)
 	// using ganache-cli, the block number to this account is 0
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
