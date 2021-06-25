@@ -10,3 +10,7 @@
 5 - address_check.go
 6 - blocks.go
 7 - transactions.go
+8 - transfer_eth.go
+9 - transfer_tokens.go
+10 - block_subscribe.go
+11 - transaction_raw_create.go
