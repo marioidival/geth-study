@@ -18,3 +18,4 @@
 13 - Store.sol
 14 - contract_deploy.go
 15 - contract_load.go
+16 - contract_read.go
