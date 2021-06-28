@@ -17,3 +17,4 @@
 12 - transaction_raw_send.go
 13 - Store.sol
 14 - contract_deploy.go
+15 - contract_load.go
