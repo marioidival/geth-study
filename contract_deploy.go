@@ -12,7 +12,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 
-	store "./contracts"
+	store "github.com/marioidival/geth-study/contracts"
 )
 
 func main() {
