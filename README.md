@@ -20,3 +20,4 @@
 15 - contract_load.go
 16 - contract_read.go
 17 - contract_write.go
+18 - contract_bytecode.go
