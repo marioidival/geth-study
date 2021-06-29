@@ -21,3 +21,4 @@
 16 - contract_read.go
 17 - contract_write.go
 18 - contract_bytecode.go
+19 - erc20.sol & contract_read_erc20.go
