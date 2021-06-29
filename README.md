@@ -25,3 +25,4 @@
 20 - event_subscribe.go
 21 - event_read.go
 22 - event_read_erc20.go
+23 - event_read_0xprotocol.go & Exchange.sol & Exchange.go
