@@ -27,3 +27,4 @@
 22. event_read_erc20.go
 23. event_read_0xprotocol.go & Exchange.sol & Exchange.go
 24. signature_generate.go
+25. signature_verify.go
